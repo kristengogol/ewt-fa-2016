@@ -1,0 +1,92 @@
+/* this is a custom CSS stylesheet */
+body  {
+	background-color: #FFFFFF;
+	font-family: georgia;
+	font-color: black;
+	}
+.body-frame {
+	margin-left: 15%;
+	margin-right: 15%;
+}
+nav {
+	text-decoration: none;
+	font-style: italic;
+	font-weight: normal;
+	display: block;
+	font-family: Georgia, serif;
+	font-size: large; 
+	font-color: #000000;
+	background-color: #FFFFFF;
+	padding: 10px;
+	text-align; left
+	}
+a:link {
+	color: black; 
+	text-decoration: none;
+	}
+a:visited {
+	color: black;
+	text-decoration: none;
+	}
+td {
+	margin: 10%;
+	}
+footer {
+	display: block;
+	}
+.social-icons {
+	float: right;
+	list-style: none outside none;
+	list-style-type: none;
+	list-style-image: none;
+	list-style-position: outside;
+	margin 8px 20px 0px !important;
+	margin-top: 8px;
+	margin-right-value: 20px;
+	margin-bottom: 0px;
+	margin-left-value: 0px;
+	margin-left-ltr-source: physical;
+	margin-left-rtl-source: physical;
+	margin-right-ltr-source: physical;
+	margin-right-rtl-source: physical;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	margin-top: 6px;
+	padding: 0px;
+	}
+.social-icons li { 
+	float: right;
+	}
+.clear {
+	clear: both;
+	}
+section#collapse {
+    display: table-cell;
+    background-color: #000000;
+    width: 20%;
+    padding: 15px;
+    vertical-align: top;
+}
+h4 {
+	font-family: Georgia, serif;
+	font-size: large; 
+	font-style: italic;
+	font-weight: normal;
+	}
+ul {
+	list-style-type: none;
+	}
+.form {
+	background-color: #FFFFFF;
+	}
+.body-frame2 {
+	margin-left: 15%;
+	margin-right: 15%;
+	background: #FFFFFF url(images/websunsetporch1920x1080.jpg) no-repeat;
+	}
+.sidenav {
+	float:left;
+	width:100%
+	background:clear;
+}
