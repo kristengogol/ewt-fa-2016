@@ -1,7 +1,161 @@
-{
-"version": 3,
-"mappings": ";AAqBA,IAAK;EACD,UAAU,EAAE,UAAU;;;AAG1B,oBAAqB;EACjB,UAAU,EAAE,OAAO;;;AAGvB,GAAI;EACA,SAAS,EAAE,IAAI;;;AAGnB,IAAK;EACD,UAAU,EAAE,6BAA6B;EACzC,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,KAAK;;;AAGhB,UAAW;EACP,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,MAAM;;;AAGlB,GAAI;EACA,SAAS,EAAE,IAAI;EACf,UAAU,EAAE,MAAM;EAClB,MAAM,EAAE,MAAW;EACnB,OAAO,EAAE,MAAW;EACpB,WAAW,EAAE,IAAI;EACjB,WAAW,EAAE,kCAAkC;EAC/C,cAAc,EAAE,OAAO;EACvB,aAAa,EAAE,gBAAgB;;;AAGnC,GAAI;EACA,SAAS,EAAE,IAAI;EACf,aAAa,EAzDN,IAAI;EA0DX,cAAc,EAAE,SAAS;EACzB,WAAW,EAAE,IAAI;;AAEjB,QAAK;EACD,OAAO,EAAE,GAAG;;;AAIpB,MAAO;EACH,UAAU,EAAE,MAAM;EAClB,UAAU,EAAE,wBAAwB;EACpC,OAAO,EArEA,IAAI;EAsEX,aAAa,EAtEN,IAAI;;;AAyEf,aAAc;EACV,OAAO,EAAE,KAAK;EACd,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,MAAM,EAAE,MAAM;EACd,UAAU,EAAE,aAAa;;AAEzB,mBAAQ;EAhER,iBAAiB,EAAE,uBAAI;EACvB,SAAS,EAAE,uBAAI;;;AAoEnB,SAAU;EA9EN,KAAK,EANC,OAAO;EAOb,MAAM,EAAE,iBAA2B;;AAEnC,uBAAc;EACV,UAAU,EAVR,OAAO;;;AAwFjB,OAAQ;EAlFJ,KAAK,EALA,OAAO;EAMZ,MAAM,EAAE,iBAA2B;;AAEnC,qBAAc;EACV,UAAU,EATT,OAAO;;;AA2FhB,SAAU;EAtFN,KAAK,EAJC,OAAO;EAKb,MAAM,EAAE,iBAA2B;;AAEnC,uBAAc;EACV,UAAU,EARR,OAAO;;;AA8FjB,YAAa;EA1FT,KAAK,EAHI,OAAO;EAIhB,MAAM,EAAE,iBAA2B;;AAEnC,0BAAc;EACV,UAAU,EAPL,OAAO;;;AAiGpB,QAAS;EACL,UAAU,EAAE,OAAO;EACnB,OAAO,EAvGA,IAAI;EAwGX,aAAa,EAxGN,IAAI;EAyGX,aAAa,EAAE,GAAG;;;AAGtB,yBAA0B;EACtB,UAAW;IACP,KAAK,EAAE,KAAK",
-"sources": ["style.scss"],
-"names": [],
-"file": "style.css"
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
 }
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  background: url("../images/bg.png") top left repeat;
+  height: 100%;
+  color: white;
+}
+
+.container {
+  width: 96%;
+  margin: 0 auto;
+  display:flex;
+  justify-content:center;
+}
+
+.h1 {
+  font-size: 34px;
+  text-align: center;
+  margin: 20px 0;
+  padding: 20px 0;
+  font-weight: bold;
+  font-family: arial black, helvetica, sans-serif;
+  letter-spacing: 0.05rem;
+  border-bottom: 10px solid black;
+}
+
+.h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.h2 span {
+  opacity: 0.5;
+}
+
+.color {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.color-sample {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  transition: all 0.2s ease;
+}
+.color-sample:hover {
+  -webkit-transform: scale(1.1) rotate(2deg);
+  transform: scale(1.1) rotate(2deg);
+}
+
+.bring-me {
+  color: #FF5339;
+  border: 5px solid #d21c00;
+}
+.bring-me .color-sample {
+  background: #FF5339;
+}
+
+.tealsy {
+  color: #2AC47F;
+  border: 5px solid #187049;
+}
+.tealsy .color-sample {
+  background: #2AC47F;
+}
+
+.sad-blue {
+  color: #4C92CC;
+  border: 5px solid #275e8b;
+}
+.sad-blue .color-sample {
+  background: #4C92CC;
+}
+
+.dark-carbon {
+  color: #55535A;
+  border: 5px solid #232225;
+}
+.dark-carbon .color-sample {
+  background: #55535A;
+}
+
+.special {
+  background: #F1D819;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+@media (min-width: 360px) {
+    .special{
+        order:1;
+    }
+    .bring-me {
+        @include colorBlock($bringMe);
+        order:2;
+    }
+    .tealsy {
+        @include colorBlock($tealsy);
+        order:3;
+    }
+    .sad-blue {
+        @include colorBlock($sadBlue);
+        order:4;
+        }
+    .dark-carbon {
+        @include colorBlock($darkCarbon);
+        order:5;
+    }
+}
+@media (min-width: 760px) {
+    .container {
+        width: 700px;
+        flex-wrap:wrap;
+        }
+
+     .bring-me {
+        @include colorBlock($bringMe);
+        order:1;
+        flex-grow:2;
+        }
+    .tealsy {
+        @include colorBlock($tealsy);
+        order:2;
+        flex-grow:2;
+        }
+     .special{
+        order:3;
+        flex-grow:4;
+        }
+    .sad-blue {
+        @include colorBlock($sadBlue);
+        order:4;
+        flex-grow:2;
+        }
+    .dark-carbon {
+        @include colorBlock($darkCarbon);
+        order:5;
+        flex-grow:2;
+        }
+    .color{
+        flex-basis:48%;
+        }
+
+/*# sourceMappingURL=style.css.map */
