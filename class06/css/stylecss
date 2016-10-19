@@ -101,10 +101,58 @@ body {
   border-radius: 8px;
 }
 
-@media (min-width: 760px) {
-  .container {
-    width: 700px;
-  }
+@media (min-width: 360px) {
+    .special{
+        order:1;
+    }
+    .bring-me {
+        @include colorBlock($bringMe);
+        order:2;
+    }
+    .tealsy {
+        @include colorBlock($tealsy);
+        order:3;
+    }
+    .sad-blue {
+        @include colorBlock($sadBlue);
+        order:4;
+        }
+    .dark-carbon {
+        @include colorBlock($darkCarbon);
+        order:5;
+    }
 }
+@media (min-width: 760px) {
+    .container {
+        width: 700px;
+
+    .bring-me {
+        @include colorBlock($bringMe);
+        order:1;
+        flex-grow:2;
+        }
+    .tealsy {
+        @include colorBlock($tealsy);
+        order:2;
+        flex-grow:2;
+        }
+     .special{
+        order:3;
+        flex-grow:4;
+        }
+    .sad-blue {
+        @include colorBlock($sadBlue);
+        order:4;
+        flex-grow:2;
+        }
+    .dark-carbon {
+        @include colorBlock($darkCarbon);
+        order:5;
+        flex-grow:2;
+        }
+    .color{
+        flex-basis:48%;
+        }
+    }
 
 /*# sourceMappingURL=style.css.map */
