@@ -40,8 +40,6 @@ body {
 .container {
     width: 96%;
     margin: 0 auto;
-    display:flex;
-    justify-content:center;
 }
 
 .h1 {
@@ -71,6 +69,7 @@ body {
     background: rgba(255, 255, 255, 0.9);
     padding: $baseUnit;
     margin-bottom: $baseUnit;
+    flex-basis:48%;
 }
 
 .color-sample {
@@ -110,57 +109,59 @@ body {
 
 @media (min-width: 360px) {
     .special{
-        order:1;
+        order:0;
     }
     .bring-me {
         @include colorBlock($bringMe);
-        order:2;
+        order:1;
     }
     .tealsy {
         @include colorBlock($tealsy);
-        order:3;
+        order:2;
     }
     .sad-blue {
         @include colorBlock($sadBlue);
-        order:4;
+        order:3;
         }
     .dark-carbon {
         @include colorBlock($darkCarbon);
-        order:5;
+        order:4;
     }
+    .colors{
+        display:flex;
+        flex-wrap:wrap;
+        flex-direction:column;
+        }
 }
 @media (min-width: 760px) {
     .container {
         width: 700px;
-        flex-wrap:wrap;
         }
-
     .bring-me {
         @include colorBlock($bringMe);
-        order:1;
-        flex-grow:2;
+        order:0;
         }
     .tealsy {
         @include colorBlock($tealsy);
-        order:2;
-        flex-grow:2;
+        order:0;
         }
      .special{
-        order:3;
-        flex-grow:4;
+        order:1;
+        flex-basis:100%;
         }
     .sad-blue {
         @include colorBlock($sadBlue);
-        order:4;
-        flex-grow:2;
+        order:2;
         }
     .dark-carbon {
         @include colorBlock($darkCarbon);
-        order:5;
-        flex-grow:2;
+        order:2;
+        }   
+    .colors{
+        display:flex;
+        flex:1;
+        flex-wrap:wrap;
+        justify-content:space-between;
+        flex-direction:row;
         }
-    .color{
-        flex-basis:48%;
-        }
-    }    
-}
+    }
