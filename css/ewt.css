@@ -99,6 +99,13 @@ vertical-align: baseline;
 line-height: 1.2em;
 color: #C14022;
 }
+a{
+    color:#fff;
+    transition:color 0.3s;
+}
+a:hover{
+    color:greenyellow;
+}
 .row2 {
     position: relative;
 	width: 100%;
@@ -117,11 +124,9 @@ color: #C14022;
    /* border-radius:25px;*/
 }
 a:link {
-color: #ffffff;
 text-decoration: none;
 }
 a:visited {
-color: #ffffff;
 text-decoration: none;
 }
 /*footer {
