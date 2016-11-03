@@ -23,23 +23,23 @@
         };
         }
 
-        onClick(){
+        onclick(){
         this.setState({
         image: this.state.image === 'sun' ? 'moon' : 'sun'
         })
         }
        
         render() {
-        const className ='image-wrapper' + (this.state.image === 'moon' ? 'dark' : '');
+        const className ='image-wrapper' + (this.state.image === 'moon' ? ' dark' : '');
 
         return(
-        <div onClick={this.onClick.bind(this)} className={className}>
-        <img src='images/' + this.state.image + '.jpg'}/>
+        <div onClick={this.onclick.bind(this)} className={className}>
+        <img src={'images/' + this.state.image + '.jpg'}/>
         </div>
         );
         }
         }
-        ReactCOM.render(<Image/>, document.querySelector('.app'));
+        ReactDOM.render(<Image/>, document.querySelector('.app'));
       
     </script>
   </body>
