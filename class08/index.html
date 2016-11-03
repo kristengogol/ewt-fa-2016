@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -25,15 +25,15 @@
 
         onClick(){
         this.setState({
-        image: this.state.image +++ 'sun' ? 'moon' : 'sun'
+        image: this.state.image === 'sun' ? 'moon' : 'sun'
         })
         }
        
         render() {
-        const className='image-wrapper' + (this.state.image === 'moon' ? 'dark' : '');
+        const className ='image-wrapper' + (this.state.image === 'moon' ? 'dark' : '');
 
         return(
-        <div onClick={this.onClick.bind(this)} className="image-wrapper">
+        <div onClick={this.onClick.bind(this)} className={className}>
         <img src='images/' + this.state.image + '.jpg'}/>
         </div>
         );
